@@ -762,51 +762,6 @@ Easily enhance biopotential signals with intuitive filter controls:</p>
 </figure>
 </section>
 </section>
-<section id="serial-plotter-monitor">
-<h3>Serial Plotter &amp; Monitor<a class="headerlink" href="#serial-plotter-monitor" title="Link to this heading">#</a></h3>
-<p>Click the <code class="docutils literal notranslate"><span class="pre">Serial</span> <span class="pre">Wizard</span></code> button to open the <strong>Serial Plotter &amp; Monitor</strong>.</p>
-<p>The <strong>Serial Plotter &amp; Monitor</strong> is designed as a standalone feature within Chords-Web, replacing the <strong>Arduino IDE’s serial plotter and monitor</strong>, which had limitations in real-time data visualization.</p>
-<ul class="simple">
-<li><p>A button bar in the footer lets you toggle between the <strong>Plotter</strong>, <strong>Monitor</strong>, or both together.</p></li>
-<li><p>Select the <strong>baud rate</strong> from the available options.</p></li>
-<li><p>Use the <strong>navigation bar</strong> to switch themes, visit the GitHub repository, check contributors, or return to the previous page.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="Chords-Web Filter" src="../../../_images/chords_serialwizard.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>User-Friendly Interface</strong></p>
-<ul>
-<li><p>Provides seamless navigation and mode switching for efficient monitoring.</p></li>
-<li><p>Allows toggling between <strong>Plotter</strong>, <strong>Monitor</strong>, or both combined using the footer button bar.</p></li>
-<li><p>Selectable <strong>baud rate</strong> for optimized serial communication.</p></li>
-</ul>
-</li>
-<li><p><strong>Navigation Bar Options</strong></p>
-<ul>
-<li><p>Switch between <strong>light and dark themes</strong>.</p></li>
-<li><p>Visit the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Web">GitHub Repository</a>.</p></li>
-<li><p>View contributors.</p></li>
-<li><p>Return to the previous page.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="fft-analysis-and-eeg-band-spectrum-plotting">
-<h3>FFT Analysis and EEG Band Spectrum Plotting<a class="headerlink" href="#fft-analysis-and-eeg-band-spectrum-plotting" title="Link to this heading">#</a></h3>
-<p>We have introduced <strong>FFT (Fast Fourier Transform) analysis</strong> and <strong>EEG band spectrum plotting</strong> to enhance real-time signal processing. These features allow you to visualize and analyze EEG frequency bands, providing deeper insights into brain activity.</p>
-<ul class="simple">
-<li><p><strong>Supported EEG Bands</strong></p></li>
-<li><p><strong>Delta (0.5 - 4 Hz)</strong> – Associated with deep sleep and unconscious states.</p></li>
-<li><p><strong>Theta (4 - 8 Hz)</strong> – Linked to relaxation, meditation, and light sleep.</p></li>
-<li><p><strong>Alpha (8 - 13 Hz)</strong> – Reflects calm, wakeful relaxation, often seen during closed-eye rest.</p></li>
-<li><p><strong>Beta (13 - 30 Hz)</strong> – Related to active thinking, problem-solving, and focused mental activity.</p></li>
-<li><p><strong>Gamma (30 - 100 Hz)</strong> – Involved in high-level cognitive functioning, attention, and perception.</p></li>
-<li><p><strong>Features</strong></p></li>
-<li><p>Download recorded channel data as a <strong>CSV file</strong> for further analysis, storage, or visualization using external tools.</p></li>
-<li><p>View <strong>live plots of EEG band values</strong>, allowing better monitoring of brainwave activity.</p></li>
-</ul>
-</section>
 </section>
 <section id="example-of-biopotential-signals">
 <h2>Example of Biopotential Signals<a class="headerlink" href="#example-of-biopotential-signals" title="Link to this heading">#</a></h2>
@@ -830,6 +785,66 @@ Easily enhance biopotential signals with intuitive filter controls:</p>
 <h3>ECG(Electrocardiography)<a class="headerlink" href="#ecg-electrocardiography" title="Link to this heading">#</a></h3>
 <p>The <strong>ECG (Electrocardiography)</strong> signal represents the electrical activity of the heart. This custom ECG signal is used both in clinical practice and research to evaluate heart rhythm, detect abnormalities, and assess cardiac health.</p>
 <a class="reference internal image-reference" href="../../../_images/chords_ecg_signal.png"><img alt="ECG Signal Example" class="align-center" src="../../../_images/chords_ecg_signal.png" style="width: 600px;" /></a>
+</section>
+<section id="serial-plotter-monitor">
+<h3>Serial Plotter &amp; Monitor<a class="headerlink" href="#serial-plotter-monitor" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h4>Overview<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>The <strong>Serial Plotter &amp; Monitor</strong> is a standalone feature within Chords-Web that provides real‑time serial data visualization.</p>
+</section>
+<section id="features">
+<h4>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Dual View Modes:</strong>
+Previous Arduino versions did not support simultaneous viewing of the serial plotter and monitor. This tool allows you to toggle between the <strong>Plotter</strong>, <strong>Monitor</strong>, or a combined view for comprehensive visualization.</p></li>
+<li><p><strong>Optimized Data Rendering:</strong>
+In newer Arduino versions, fast data plotting can lead to cluttered displays. The Serial Plotter &amp; Monitor is optimized to handle high-frequency data, ensuring clear and accurate visual representation.</p></li>
+<li><p><strong>Footer Button Bar:</strong>
+Easily switch between different viewing modes using an intuitive footer button bar.</p></li>
+<li><p><strong>Baud Rate Selection:</strong>
+Choose from multiple baud rates to optimize serial communication based on your device’s requirements.</p></li>
+<li><p><strong>Navigation Bar:</strong>
+Access features such as theme switching (light/dark), visit the GitHub repository, view contributor details, or return to the previous page.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="Chords-Web Filter" src="../../../_images/chords_serialwizard.png" />
+</figure>
+</section>
+<section id="user-friendly-interface">
+<h4>User-Friendly Interface<a class="headerlink" href="#user-friendly-interface" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Intuitive Layout:</strong>
+Designed for seamless navigation and mode switching.</p></li>
+<li><p><strong>Enhanced Serial Communication:</strong>
+Selectable baud rates and optimized data rendering ensure reliable, clear visual output.</p></li>
+<li><p><strong>Comprehensive Navigation:</strong>
+Quick access to GitHub, contributor information, and other resources via the navigation bar.</p></li>
+</ul>
+</section>
+<section id="running-the-application">
+<h4>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Click the <strong>Serial Wizard</strong> button to launch the Serial Plotter &amp; Monitor.</p></li>
+<li><p>Click on Connect button select board.</p></li>
+<li><p>Use the footer button bar to toggle between the Plotter, Monitor, or a combined view.</p></li>
+<li><p>Navigate using the top bar to switch themes, visit the GitHub repository, view contributors, or return to the previous page.</p></li>
+</ol>
+</section>
+</section>
+<section id="fft-analysis-and-eeg-band-spectrum-plotting">
+<h3>FFT Analysis and EEG Band Spectrum Plotting<a class="headerlink" href="#fft-analysis-and-eeg-band-spectrum-plotting" title="Link to this heading">#</a></h3>
+<p>We have introduced <strong>FFT (Fast Fourier Transform) analysis</strong> and <strong>EEG band spectrum plotting</strong> to enhance real-time signal processing. These features allow you to visualize and analyze EEG frequency bands, providing deeper insights into brain activity.</p>
+<ul class="simple">
+<li><p><strong>Supported EEG Bands</strong></p></li>
+<li><p><strong>Delta (0.5 - 4 Hz)</strong> – Associated with deep sleep and unconscious states.</p></li>
+<li><p><strong>Theta (4 - 8 Hz)</strong> – Linked to relaxation, meditation, and light sleep.</p></li>
+<li><p><strong>Alpha (8 - 13 Hz)</strong> – Reflects calm, wakeful relaxation, often seen during closed-eye rest.</p></li>
+<li><p><strong>Beta (13 - 30 Hz)</strong> – Related to active thinking, problem-solving, and focused mental activity.</p></li>
+<li><p><strong>Gamma (30 - 100 Hz)</strong> – Involved in high-level cognitive functioning, attention, and perception.</p></li>
+<li><p><strong>Features</strong></p></li>
+<li><p>Download recorded channel data as a <strong>CSV file</strong> for further analysis, storage, or visualization using external tools.</p></li>
+<li><p>View <strong>live plots of EEG band values</strong>, allowing better monitoring of brainwave activity.</p></li>
+</ul>
 </section>
 </section>
 <section id="browser-compatibility">
@@ -967,8 +982,6 @@ Local database for web applications.</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-web-icons">Chords-Web Icons</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-plotter-monitor">Serial Plotter &amp; Monitor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fft-analysis-and-eeg-band-spectrum-plotting">FFT Analysis and EEG Band Spectrum Plotting</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-biopotential-signals">Example of Biopotential Signals</a><ul class="nav section-nav flex-column">
@@ -976,6 +989,14 @@ Local database for web applications.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-electroencephalography">EEG(Electroencephalography)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-electrooculography">EOG(Electrooculography)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-electrocardiography">ECG(Electrocardiography)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-plotter-monitor">Serial Plotter &amp; Monitor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#user-friendly-interface">User-Friendly Interface</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fft-analysis-and-eeg-band-spectrum-plotting">FFT Analysis and EEG Band Spectrum Plotting</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
