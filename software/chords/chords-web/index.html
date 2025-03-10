@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Mar 08, 2025"/>
+    <meta name="docbuild:last-update" content="Mar 10, 2025"/>
   </head>
   
   
@@ -635,6 +635,21 @@
 <img alt="Chords-Web Landing Page" src="../../../_images/chords_landing_page.png" />
 </figure>
 </section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>You have to flash <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords-Web Arduino Firmware</a> to your development board using Arduino IDE.</p></li>
+<li><p>For now Chords-Web is compatible with chromium based browsers. To ensure compatibility with supported browsers, see <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">Browser Compatibility</span></a>.</p></li>
+</ul>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Compatible Development Board</a></p></li>
+<li><p>A USB cable (type depends on board)</p></li>
+<li><p><a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a></p></li>
+</ul>
+</section>
 <section id="applications">
 <h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
 <p>Below are some key applications of Chords-Web:</p>
@@ -645,7 +660,7 @@
 <li><p><strong>Connection</strong>
 Effortlessly compatible with <strong>BioAmp Hardware</strong>, Chords-Web automatically detects the development board running the <strong>Chords-Web Arduino Firmware</strong>. This simplifies the setup process, ensuring a smooth and efficient workflow from data acquisition to visualization.</p>
 <figure class="align-center">
-<img alt="Chords-Web Connection" src="../../../_images/chords_connection.png" />
+<img alt="Chords-Web Connection" src="../../../_images/chords_connectpage.png" />
 </figure>
 </li>
 <li><p><strong>Board Support</strong>
@@ -687,7 +702,7 @@ Easily enhance biopotential signals with intuitive filter controls:</p>
 <li><p><strong>Master Filter</strong>: Apply filters across all channels with one button.</p></li>
 </ul>
 <figure class="align-center">
-<img alt="Chords-Web Filter" src="../../../_images/chords_filter.png" />
+<img alt="Chords-Web Filter" src="../../../_images/chords_filters.png" />
 </figure>
 </li>
 <li><p><strong>Channel Support</strong></p>
@@ -705,10 +720,57 @@ Easily enhance biopotential signals with intuitive filter controls:</p>
 </ul>
 </li>
 </ul>
+<section id="how-to-use-chords-web">
+<h4>How to Use Chords-Web<a class="headerlink" href="#how-to-use-chords-web" title="Link to this heading">#</a></h4>
+</section>
+<section id="uploading-the-code">
+<h4>Uploading the Code<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Connect the Arduino board to your laptop using the USB cable.</p></li>
+<li><p>Copy and paste the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Arduino Firmware</a>  for your board into the Arduino IDE.</p></li>
+<li><p>Select your board under <cite>Tools &gt; Board</cite>.</p></li>
+<li><p>Choose the correct COM port in the tools menu (the one that disappears when you disconnect the board).</p></li>
+<li><p>Upload the code and open Chords-Web in your web browser.</p></li>
+</ol>
+</section>
+<section id="using-the-software">
+<h4>Using the Software<a class="headerlink" href="#using-the-software" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Visualize</span> <span class="pre">Now</span></code> button to navigate to the applications page. Here, you will find two options.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Chords</span> <span class="pre">Visualizer</span></code> button to establish a connection with the Arduino and start streaming data.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">ZoomIn/ZoomOut</span></code> buttons to adjust data visualization.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">Play/Pause</span></code> button to control the data stream. Navigate the last five snapshots with the <code class="docutils literal notranslate"><span class="pre">Left/Right</span></code> buttons in the <strong>Frame Buffer</strong> feature.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Record</span></code> button to start recording data into a CSV file.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button to save the recorded data.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> button to remove recorded data.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> button to apply filters for EMG, ECG, EOG, and EEG signals:
+- <code class="docutils literal notranslate"><span class="pre">Muscle</span></code> (70Hz high-pass for EMG)
+- <code class="docutils literal notranslate"><span class="pre">Heart</span></code> (30Hz low-pass for ECG)
+- <code class="docutils literal notranslate"><span class="pre">Eye</span></code> (10Hz low-pass for EOG)
+- <code class="docutils literal notranslate"><span class="pre">Brain</span></code> (45Hz low-pass for EEG)
+- Use the <strong>Master button</strong> to apply filters across all channels.
+- Apply <strong>50Hz or 60Hz</strong> filters to individual or all channels.</p></li>
+<li><p>Select channels via the <code class="docutils literal notranslate"><span class="pre">Channels</span></code> button in the settings popover.</p></li>
+<li><p>Adjust the number of channels using the <code class="docutils literal notranslate"><span class="pre">Plus/Minus</span></code> buttons.</p></li>
+<li><p>Adjust zoom using the <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> slider for a detailed or overall view.</p></li>
+</ol>
+</section>
+<section id="chords-web-icons">
+<h4>Chords-Web Icons<a class="headerlink" href="#chords-web-icons" title="Link to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="Chords-Web Icons" src="../../../_images/chords_icon.png" />
+</figure>
+</section>
 </section>
 <section id="serial-plotter-monitor">
 <h3>Serial Plotter &amp; Monitor<a class="headerlink" href="#serial-plotter-monitor" title="Link to this heading">#</a></h3>
+<p>Click the <code class="docutils literal notranslate"><span class="pre">Serial</span> <span class="pre">Wizard</span></code> button to open the <strong>Serial Plotter &amp; Monitor</strong>.</p>
 <p>The <strong>Serial Plotter &amp; Monitor</strong> is designed as a standalone feature within Chords-Web, replacing the <strong>Arduino IDE’s serial plotter and monitor</strong>, which had limitations in real-time data visualization.</p>
+<ul class="simple">
+<li><p>A button bar in the footer lets you toggle between the <strong>Plotter</strong>, <strong>Monitor</strong>, or both together.</p></li>
+<li><p>Select the <strong>baud rate</strong> from the available options.</p></li>
+<li><p>Use the <strong>navigation bar</strong> to switch themes, visit the GitHub repository, check contributors, or return to the previous page.</p></li>
+</ul>
 <figure class="align-center">
 <img alt="Chords-Web Filter" src="../../../_images/chords_serialwizard.png" />
 </figure>
@@ -746,77 +808,29 @@ Easily enhance biopotential signals with intuitive filter controls:</p>
 </ul>
 </section>
 </section>
-<section id="software-requirements">
-<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>You have to flash <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords-Web Arduino Firmware</a> to your development board using Arduino IDE.</p></li>
-<li><p>For now Chords-Web is compatible with chromium based browsers. To ensure compatibility with supported browsers, see <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">Browser Compatibility</span></a>.</p></li>
-</ul>
+<section id="example-of-biopotential-signals">
+<h2>Example of Biopotential Signals<a class="headerlink" href="#example-of-biopotential-signals" title="Link to this heading">#</a></h2>
+<p>The examples below combine theoretical descriptions with illustrative images to showcase signal quality.</p>
+<section id="emg-electromyography">
+<h3>EMG(Electromyography)<a class="headerlink" href="#emg-electromyography" title="Link to this heading">#</a></h3>
+<p>EMG captures the electrical activity produced by skeletal muscles. This signal is essential for assessing muscle health and diagnosing neuromuscular disorders.</p>
+<a class="reference internal image-reference" href="../../../_images/chords_emg_signal.png"><img alt="EMG Signal Example" class="align-center" src="../../../_images/chords_emg_signal.png" style="width: 600px;" /></a>
 </section>
-<section id="hardware-requirements">
-<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Compatible Development Board</a></p></li>
-<li><p>A USB cable (type depends on board)</p></li>
-<li><p><a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a></p></li>
-</ul>
+<section id="eeg-electroencephalography">
+<h3>EEG(Electroencephalography)<a class="headerlink" href="#eeg-electroencephalography" title="Link to this heading">#</a></h3>
+<p>EEG records the electrical activity of the brain and is commonly used for diagnosing neurological conditions and studying brain functions.</p>
+<a class="reference internal image-reference" href="../../../_images/chords_eeg_signal.png"><img alt="EEG Signal Example" class="align-center" src="../../../_images/chords_eeg_signal.png" style="width: 600px;" /></a>
 </section>
-<section id="how-to-use-chords-web">
-<h2>How to Use Chords-Web<a class="headerlink" href="#how-to-use-chords-web" title="Link to this heading">#</a></h2>
-<section id="uploading-the-code">
-<h3>Uploading the Code<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Connect the Arduino board to your laptop using the USB cable.</p></li>
-<li><p>Copy and paste the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Arduino Firmware</a>  for your board into the Arduino IDE.</p></li>
-<li><p>Select your board under <cite>Tools &gt; Board</cite>.</p></li>
-<li><p>Choose the correct COM port in the tools menu (the one that disappears when you disconnect the board).</p></li>
-<li><p>Upload the code and open Chords-Web in your web browser.</p></li>
-</ol>
+<section id="eog-electrooculography">
+<h3>EOG(Electrooculography)<a class="headerlink" href="#eog-electrooculography" title="Link to this heading">#</a></h3>
+<p>EOG measures the electrical potential generated by eye movements. It is often used in studies related to sleep, fatigue, and eye movement disorders.</p>
+<a class="reference internal image-reference" href="../../../_images/chords_eog_signal.png"><img alt="EOG Signal Example" class="align-center" src="../../../_images/chords_eog_signal.png" style="width: 600px;" /></a>
 </section>
-<section id="using-the-software">
-<h3>Using the Software<a class="headerlink" href="#using-the-software" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Visualize</span> <span class="pre">Now</span></code> button to navigate to the applications page. Here, you will find two options:
-- <code class="docutils literal notranslate"><span class="pre">Chords</span> <span class="pre">Visualizer</span></code>
-- <code class="docutils literal notranslate"><span class="pre">Serial</span> <span class="pre">Wizard</span></code></p></li>
-</ol>
+<section id="ecg-electrocardiography">
+<h3>ECG(Electrocardiography)<a class="headerlink" href="#ecg-electrocardiography" title="Link to this heading">#</a></h3>
+<p>The <strong>ECG (Electrocardiography)</strong> signal represents the electrical activity of the heart. This custom ECG signal is used both in clinical practice and research to evaluate heart rhythm, detect abnormalities, and assess cardiac health.</p>
+<a class="reference internal image-reference" href="../../../_images/chords_ecg_signal.png"><img alt="ECG Signal Example" class="align-center" src="../../../_images/chords_ecg_signal.png" style="width: 600px;" /></a>
 </section>
-<section id="id2">
-<h3><strong>Chords Visualizer</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="2">
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Chords</span> <span class="pre">Visualizer</span></code> button to establish a connection with the Arduino and start streaming data.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">ZoomIn/ZoomOut</span></code> buttons to adjust data visualization.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">Play/Pause</span></code> button to control the data stream. Navigate the last five snapshots with the <code class="docutils literal notranslate"><span class="pre">Left/Right</span></code> buttons in the <strong>Frame Buffer</strong> feature.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Record</span></code> button to start recording data into a CSV file.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button to save the recorded data.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> button to remove recorded data.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> button to apply filters for EMG, ECG, EOG, and EEG signals:
-- <code class="docutils literal notranslate"><span class="pre">Muscle</span></code> (70Hz high-pass for EMG)
-- <code class="docutils literal notranslate"><span class="pre">Heart</span></code> (30Hz low-pass for ECG)
-- <code class="docutils literal notranslate"><span class="pre">Eye</span></code> (10Hz low-pass for EOG)
-- <code class="docutils literal notranslate"><span class="pre">Brain</span></code> (45Hz low-pass for EEG)
-- Use the <strong>Master button</strong> to apply filters across all channels.
-- Apply <strong>50Hz or 60Hz</strong> filters to individual or all channels.</p></li>
-<li><p>Select channels via the <code class="docutils literal notranslate"><span class="pre">Channels</span></code> button in the settings popover.</p></li>
-<li><p>Adjust the number of channels using the <code class="docutils literal notranslate"><span class="pre">Plus/Minus</span></code> buttons.</p></li>
-<li><p>Adjust zoom using the <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> slider for a detailed or overall view.</p></li>
-</ol>
-</section>
-<section id="serial-wizard">
-<h3><strong>Serial Wizard</strong><a class="headerlink" href="#serial-wizard" title="Link to this heading">#</a></h3>
-<ol class="arabic simple" start="10">
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Serial</span> <span class="pre">Wizard</span></code> button to open the <strong>Serial Plotter &amp; Monitor</strong>.
-- A button bar in the footer lets you toggle between the <strong>Plotter</strong>, <strong>Monitor</strong>, or both together.
-- Select the <strong>baud rate</strong> from the available options.
-- Use the <strong>navigation bar</strong> to switch themes, visit the GitHub repository, check contributors, or return to the previous page.</p></li>
-</ol>
-</section>
-</section>
-<section id="chords-web-icons">
-<h2>Chords-Web Icons<a class="headerlink" href="#chords-web-icons" title="Link to this heading">#</a></h2>
-<figure class="align-center">
-<img alt="Chords-Web Icons" src="../../../_images/chords_icons.png" />
-</figure>
 </section>
 <section id="browser-compatibility">
 <span id="chords-browsers-compatibility"></span><h2>Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Link to this heading">#</a></h2>
@@ -943,22 +957,27 @@ Local database for web applications.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-visualizer">Chords Visualizer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-visualizer">Chords Visualizer</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-chords-web">How to Use Chords-Web</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-software">Using the Software</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-web-icons">Chords-Web Icons</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-plotter-monitor">Serial Plotter &amp; Monitor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fft-analysis-and-eeg-band-spectrum-plotting">FFT Analysis and EEG Band Spectrum Plotting</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-chords-web">How to Use Chords-Web</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the Code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-software">Using the Software</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Chords Visualizer</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-wizard"><strong>Serial Wizard</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-biopotential-signals">Example of Biopotential Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emg-electromyography">EMG(Electromyography)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-electroencephalography">EEG(Electroencephalography)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-electrooculography">EOG(Electrooculography)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-electrocardiography">ECG(Electrocardiography)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-web-icons">Chords-Web Icons</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">Technologies Used</a></li>
 </ul>
@@ -1027,7 +1046,7 @@ Local database for web applications.</p>
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Mar 08, 2025.
+  Last updated on Mar 10, 2025.
   <br/>
 </p></div>
       
