@@ -262,6 +262,13 @@ Features
      - View real-time plots of EEG band values for better brain activity tracking.
 
 
+.. figure:: ./media/chords_bands.*
+   :alt: EEG Band Spectrum Plotting
+   :width: 600px
+   :align: center
+  
+   EEG Band Spectrum Plotting
+
 Supported EEG Bands
 -------------------
 
@@ -429,3 +436,5 @@ Technologies Used
     :alt: Chords-Web Tech Stack
 
     Chords-Web Tech Stack
+
+    
